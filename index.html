@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Loskin - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Martin Loskin</h1>
+        <p>UX/UI Designer • Game & Product Design</p>
+        <p>Email: martin.loskin@gmail.com</p>
+        <nav>
+            <ul>
+                <li><a href="#all" onclick="filterProjects('all')">All Projects</a></li>
+                <li><a href="#games" onclick="filterProjects('games')">Games</a></li>
+                <li><a href="#products" onclick="filterProjects('products')">Product Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main-content">
+        <div id="project-container" class="grid">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+        
+        <div id="project-detail" class="hidden">
+            <button class="close-btn" onclick="closeProject()">&times;</button>
+            <div id="project-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
