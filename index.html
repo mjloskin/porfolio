@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Loskin - Portfolio</title>
+    <title>Martin Loskin | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
+    <nav class="sidebar">
         <h1>Martin Loskin</h1>
-        <p>UX/UI Designer • Game & Product Design</p>
-        <p>Email: martin.loskin@gmail.com</p>
-        <nav>
-            <ul>
-                <li><a href="#all" onclick="filterProjects('all')">All Projects</a></li>
-                <li><a href="#games" onclick="filterProjects('games')">Games</a></li>
-                <li><a href="#products" onclick="filterProjects('products')">Product Design</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    
-    <div class="main-content">
-        <div id="project-container" class="grid">
-            <!-- Projects will be dynamically loaded here -->
-        </div>
-        
-        <div id="project-detail" class="hidden">
-            <button class="close-btn" onclick="closeProject()">&times;</button>
-            <div id="project-content"></div>
-        </div>
-    </div>
+        <p>Principal UX/UI Designer</p>
+        <ul>
+            <li><a href="index.html">All Projects</a></li>
+            <li><a href="#" class="filter" data-category="game">Game UX/UI</a></li>
+            <li><a href="#" class="filter" data-category="product">Product Design</a></li>
+            <li><a href="#" class="filter" data-category="data">Data Visualization</a></li>
+        </ul>
+        <p>📧 martin.loskin@gmail.com</p>
+        <p><a href="https://linkedin.com/in/martinloskin" target="_blank">LinkedIn</a></p>
+    </nav>
+
+    <main>
+        <section id="portfolio">
+            <div class="project" data-category="game">
+                <a href="project-example.html">
+                    <img src="images/star-stuff.jpg" alt="Star Stuff">
+                    <h3>Star Stuff</h3>
+                    <p>Puzzle game for programming logic</p>
+                </a>
+            </div>
+
+            <div class="project" data-category="product">
+                <a href="project-example.html">
+                    <img src="images/reveal.jpg" alt="Reveal">
+                    <h3>Reveal</h3>
+                    <p>Data visualization platform</p>
+                </a>
+            </div>
+
+            <div class="project" data-category="game">
+                <a href="project-example.html">
+                    <img src="images/bullet-boy.jpg" alt="Bullet Boy">
+                    <h3>Bullet Boy</h3>
+                    <p>Fast-paced platformer UI</p>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
